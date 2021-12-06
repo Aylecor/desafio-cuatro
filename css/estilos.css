@@ -19,14 +19,13 @@
   	background-color: #000;
 }
 
-
 .header .logo {
  	margin-top: 20px;
   	align-self: center;
 }
 
 .header .logo img {
-  	width: 80px;
+  	width: 80px; 
   	border-radius: 50%;
   	box-sizing: border-box;
 }
@@ -41,15 +40,6 @@
 .header .nav li a{
 	text-decoration: none;
 	color:#b5b5b5;
-}
-
-/*imagen de inicio*/
-.imageninicio img{
-	height: 124vh;
-	display: block;
-	background-image: url('../assets/inicioimagen.jpg');
-	background-position: center;
-	background-size: cover;
 }
 
 /*grids areas*/
@@ -72,8 +62,25 @@
 	min-height: 3rem;
 }
 
+/*animación en area uno*/
+@keyframes anima{
+	0%{
+		background-position: 7% 0%;
+	}
+	50%{
+		background-position: 97% 100;
+	}
+	100%{
+		background-position: 7% 0;
+	}
+}
+
+/*gradiente en area uno*/
 .areaUno{
 	grid-area: uno;
+	animation: anima 45s linear infinite;
+	background: linear-gradient(114.34deg,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.48) 26%,rgba(0,0,0,0.43) 34%,rgba(0,0,0,0.38) 41%,rgba(0,0,0,0.31) 52%,rgba(0,0,0,0.25) 62%,rgba(0,0,0,0.21) 68%,rgba(0,0,0,0.14) 79%,rgba(0,0,0,0.09) 87%,rgba(0,0,0,0.05) 93%,rgba(0,0,0,0) 100%);
+	background-size: 100%;
 }
 
 .areaDos{
@@ -99,19 +106,24 @@
 }
 
 /*imagenes del equipo*/
-
 .imagenes{
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
+	transition: all 200ms ease-in-out;
 }
 
 .imagen{
 	padding: 5px 5px 35px 5px;
-	margin: 5px;
+	margin: 1rem;
+}
+
+/*imagen con transformación en hover*/
+.imagen:hover{
 	background-color: #B5B5B5;
+	transform: scale(1, 1);
 }
 
 /*formulario*/
@@ -124,6 +136,12 @@
 	border-radius: 1rem;
 	padding: 1rem;
 	margin: 1rem;
+} 
+
+/*formulario con focus*/
+.formluarioInput:focus{
+	color:#fff;
+	background-color:#000;
 }
 
 /*inicio de footer*/
