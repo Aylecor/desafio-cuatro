@@ -10,7 +10,7 @@
 /*menú de navegación*/
 .header {
 	font-family: 'Roboto', 'sans-serif';
-  	margin-bottom: 1%;
+  	margin-bottom: 0;
   	width: 100%;
   	display: flex;
   	flex-direction: column;
@@ -42,6 +42,11 @@
 	color:#b5b5b5;
 }
 
+/*carrusel en el inicio*/
+.carousel-item{
+	max-height: 1100px;	
+}
+
 /*grids areas*/
 .areas{
 	font-family: 'Roboto Slab', 'serif';
@@ -68,10 +73,10 @@
 		background-position: 7% 0%;
 	}
 	50%{
-		background-position: 97% 100;
+		background-position: 97% 100%;
 	}
 	100%{
-		background-position: 7% 0;
+		background-position: 7% 0%;
 	}
 }
 
@@ -80,7 +85,7 @@
 	grid-area: uno;
 	animation: anima 45s linear infinite;
 	background: linear-gradient(114.34deg,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.48) 26%,rgba(0,0,0,0.43) 34%,rgba(0,0,0,0.38) 41%,rgba(0,0,0,0.31) 52%,rgba(0,0,0,0.25) 62%,rgba(0,0,0,0.21) 68%,rgba(0,0,0,0.14) 79%,rgba(0,0,0,0.09) 87%,rgba(0,0,0,0.05) 93%,rgba(0,0,0,0) 100%);
-	background-size: 100%;
+	background-size: 1000%;
 }
 
 .areaDos{
@@ -184,7 +189,6 @@
 @media all and (min-width: 576px){
 
 	.header {
-	  	margin-bottom: 2%;
 	  	width: 100%;
 	  	flex-direction: column;
 	}
@@ -213,7 +217,6 @@
 @media all and (min-width: 1200px){
 
 	.header {
-	  	margin-bottom: 3%;
 	  	width: 100%;
 	  	flex-direction: column;
 	}
